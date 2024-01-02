@@ -9,7 +9,7 @@ public class NumberGuessingGame
 		int maxNum=100;
 		int maxAttempts=5;
 		int totalRounds=2;
-		boolean guessedNum=false;
+		
 		
 		System.out.println("Heyyyy Welcome to the Number Guessing Game!!!");
 		System.out.println("I will generate a number between"+" "+minNum+" "+"and"+" "+maxNum+"."+"You have"+" "+maxAttempts+" "+"attempts to guess the number.\nLETS GET STARTED...");
@@ -20,6 +20,7 @@ public class NumberGuessingGame
 			
 			int attempt=0;
 			System.out.println("ROUND"+" "+round+" BEGINS...");
+			boolean guessedNum=false;
 			while(attempt<maxAttempts)
 			{
 				Scanner sc =new Scanner(System.in);
@@ -41,9 +42,11 @@ public class NumberGuessingGame
 			if(guessedNum==true) {
 				System.out.println("Congratulations!! You've guessed the number correctly in "+attempt+" attempts.");
 			}
+			else{
+				
 			  System.out.println("Ooops! Better luck next time:)\nThe number was: " +numGenerated);
 			  guessedNum=false;
-			  
+			}
 		}
 		
 		
